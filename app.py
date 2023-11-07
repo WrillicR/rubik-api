@@ -7,10 +7,12 @@ needed to transform the input cube to a solved state.
 import os
 import json
 from flask import Flask, request
+from flask_cors import CORS
 from rubik.view.solve import solve
 from rubik.view.rotate import rotate
 
 app = Flask(__name__)
+CORS(app)
 
 #-----------------------------------
 #  The following code is invoked with the path portion of the URL matches
