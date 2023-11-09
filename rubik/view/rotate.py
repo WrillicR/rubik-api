@@ -18,7 +18,7 @@ def rotate(parms):
     directions = parms.get('dir')
     
     if directions is None or len(directions) == 0:
-            directions = "F"
+            directions = ""
         
     ## check for extra passed parameters
     keys = list(parms.keys())
