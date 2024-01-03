@@ -6,7 +6,7 @@ needed to transform the input cube to a solved state.
 '''
 import os
 import json
-from flask import Flask, request
+from flask import Flask, request, render_template
 from flask_cors import CORS
 from rubik.view.solve import solve
 from rubik.view.rotate import rotate
@@ -17,12 +17,12 @@ CORS(app)
 #-----------------------------------
 #  The following code is invoked with the path portion of the URL matches
 #         /
-#  It returns a welcome string
+#  It returns an html page
 #
 @app.route('/')
 def default():
     '''Return welcome information'''
-    return 'welcome to secure software process'
+    return render_template('index.html')
 
 #-----------------------------------
 #  The following code is invoked with the path portion of the URL matches
@@ -33,6 +33,16 @@ def default():
 def about():
     '''Return author information'''
     return str(_getAuthor())
+
+#-----------------------------------
+#  The following code is invoked with the path portion of the URL matches
+#         /rubik
+#  It returns a visualizer
+#
+@app.route('/rubik')
+def rubik():
+    '''Return visualizer'''
+    return render_template('rubik.html')
 
 #-----------------------------------
 #  The following code is invoked when the path portion of the URL matches

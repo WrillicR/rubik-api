@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Social meta tags -->
+      <!-- Primary Meta Tags -->
+      <meta name="title" content="Rubik's Cube Solver">
+      <meta name="description" content="3D Real-Time Rubik's Cube Solving">
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Rubik's Cube Solver">
+      <meta property="og:description" content="3D Real-Time Rubik's Cube Solving">
+      <meta property="og:image" content="cube.jpg">
+      <!-- Twitter -->
+      <meta property="twitter:card" content="summary_large_image">
+      <meta property="twitter:title" content="Rubik's Cube Solver">
+      <meta property="twitter:description" content="3D Real-Time Rubik's Cube Solving">
+      <meta property="twitter:image" content="cube.jpg">
+    <!-- Bootstrap CSS -->
+    <link href="https://reeveshome.org/wilson/css/bootstrap.min.css" rel="stylesheet">
+    <!-- other -->
+    <link href="https://eng.auburn.edu/css/font-awesome4-7/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Inter">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <!-- my stuff -->
+    <link rel="shortcut icon" type="image/jpg" href="../favicon.png">
+    <link rel="stylesheet" href="/static/style.css"> 
+    <title>Rubik's Cube</title>
+  </head>
+  <body class="m-0 p-0 h-100">
+    <div class="d-flex" style="
+        position: absolute;
+        bottom: 8%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    ">
+      <a class="btn btn-light mx-2" id="shuffle">Shuffle</a>
+      <a class="btn btn-light mx-2" id="solve">Solve</a>
+    </div>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+        "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/",
+        "tween": "https://unpkg.com/three@0.157.0/examples/jsm/libs/tween.module.js"
+        }
+    }
+    </script>
+    <script type="module" src="{{url_for('static', filename='main.js')}}"></script>
+  </body>
+</html>

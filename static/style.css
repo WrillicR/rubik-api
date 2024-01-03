@@ -1,0 +1,86 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: #010A0D;
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
+  height: 100%;
+  color: #ccc;
+}
+footer {
+  background-color: #0D171A;
+  color: #566368;
+  width: 100%;
+  padding: 1em 0;
+}
+.main-content {
+  width: 100%;
+  padding: 6% 10%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Raleway, sans-serif;
+}
+.btn {
+  font-family: "Space Mono", sans-serif;
+  font-size: .65em;
+  font-weight: 900;
+  border-radius: 0;
+  transition: all .15s !important;
+  padding: 4px 24px;
+}
+.btn:hover, .btn.active {
+  color: #fff;
+  background-color: #010A0D;
+  box-shadow: #fff -4px 4px;
+}
+.btn:active {
+  color: #fff !important;
+  background-color: #010A0D !important;
+  box-shadow: #fff -6px 6px;
+}
+p {
+  font-size: 1.15rem;
+}
+.circle-cont {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .6;
+  filter: blur(64px);
+}
+.circle {
+  border-width: 0;
+  border-radius: 50%;
+  background-color: #afb03a;
+  position: absolute;
+  /* filter: blur(24px); */
+}
+.c-1 {
+  width: 18vw;
+  height: 18vw;
+  top: -8vw;
+  left: -4vw;
+  background: linear-gradient(150deg, #41B5A0 0%, #114B41 80%);
+}
+.c-2 {
+  width: 40vw;
+  height: 40vw;
+  top: 12vw;
+  right: -12vw;
+  background: linear-gradient(180deg, #DC8484 0%, #7B2323 80%);
+}
+.c-3 {
+  width: 28vw;
+  height: 28vw;
+  bottom: -12vw;
+  right: 32vw;
+  background: linear-gradient(150deg, #D6A938 0%, #4B3600 80%);
+}
+.space-mono {
+  font-family: "Space Mono", Inter, sans-serif;
+}
