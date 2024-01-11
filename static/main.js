@@ -246,7 +246,7 @@ function initSolve() {
   futureTurns = [];
   cubeQueue.push(CubeState.CALC);
   console.log("Past turns:\t" + pastTurns);
-  fetch('https://rubik-api.vercel.app/rubik/rotate?cube=bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww&dir=' + pastTurns, {
+  fetch('/rubik/rotate?cube=bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww&dir=' + pastTurns, {
     method: 'GET'
   })
   .then(response => {
@@ -258,7 +258,7 @@ function initSolve() {
   .then(data => {
       data = JSON.parse(data.replace(/'/g, '"'));
       //console.log(data.cube);
-      fetch('https://rubik-api.vercel.app/rubik/solve?cube=' + data["cube"], {
+      fetch('/rubik/solve?cube=' + data["cube"], {
         method: 'GET'
       })
       .then(response => {
