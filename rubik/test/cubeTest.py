@@ -121,11 +121,11 @@ class CubeTest(unittest.TestCase):
         self.assertEqual(myCube.get(), "rrLTTprprTrpWrTLTyLWTWpypyWrrppyrTTpWyyWWLLpyWLTLLyyLW")
     
     
-    def test_110_ShouldDefaulttoF_Rotation(self):
+    def test_110_ShouldNotRotate(self):
         cubeString = "ooyrbwbbwgyoororbowbrggwwrybwygoggorwwbrygbboyygywrryg";
         myCube = cube.Cube(cubeString)
         myCube.rotate("")              
-        self.assertEqual(myCube.get(), "brobbowwybyobroobowbrggwwrybwygoygogwwbrygrgyrogywrryg")
+        self.assertEqual(myCube.get(), "ooyrbwbbwgyoororbowbrggwwrybwygoggorwwbrygbboyygywrryg")
         
     def test_120_ShouldDoMultipleRotations(self):
         cubeString = "RuCuCRWWvWC5CRWu5WCv5vuCuuuvC5vvvW5CC5RW55uRRvR5RWuRWv";
@@ -136,8 +136,8 @@ class CubeTest(unittest.TestCase):
     def test_130_ShouldDefaultMissingDirection(self):
         cubeString = "dhhhhrr0drdg0r00hhdgSd00SrSrShggg0gShd0hdrgrd0SrSSdgSg";
         myCube = cube.Cube(cubeString)
-        myCube.rotate(None)              
-        self.assertEqual(myCube.get(), "rhd0hhdrhgdgrr0dhhdgSd00SrSrS0ggS0grhd0hdrSgh00rSSdgSg")
+        myCube.rotate(None)
+        self.assertEqual(myCube.get(), "dhhhhrr0drdg0r00hhdgSd00SrSrShggg0gShd0hdrgrd0SrSSdgSg")
     
     def test_900_ShouldThrowDirectionError(self):
         cubeString = "bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww";

@@ -162,6 +162,17 @@ class SolveTest(TestCase):
         solution = solve(parms)
         self.assertIn("ok", solution.get('status'))
 
+
+    def test_201_solve_shouldSolveEntireCube(self):
+        encodedCube = "rrbwbygyyrbworbbyyoowogboroggwyoobryrggwywbbyrrowwgwgg"
+        parms = {'cube' : encodedCube}
+        solution = solve(parms)
+        self.assertIn("ok", solution.get('status'))
+        resultingCube = Cube(encodedCube)
+        resultingCube.rotate(solution.get('solution'))
+        self.assertEqual('bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww', resultingCube.get())
+
+
     def test_910_solve_shouldErrMissingCube(self):
         parms = {}
         solution = solve(parms)

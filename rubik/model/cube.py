@@ -166,6 +166,9 @@ class Cube:
     
     
     def rotate(self, directions):
+
+        if directions == None:
+            directions = ""
         
         for direction in list(directions):
             
