@@ -14,8 +14,9 @@ def _getTopDirection(movingFace, emptySlots):
     rotations = abs(num1 - num2)
     if rotations == 3:
         direction = "u"
-    for _ in range(rotations):
-        direction += "U"
+    else:
+        for _ in range(rotations):
+            direction += "U"
     return direction
 
 
